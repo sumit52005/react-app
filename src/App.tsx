@@ -13,7 +13,7 @@ function App() {
     <ListGroup items={items} heading="cities" onSelectitem={handleSelectitem}/>
     
     <Alert>
-        hello <span>World</span> 
+        hello <span> React CI/CD 🚀</span> 
     </Alert>
     <Button  onClick={()=> console.log("clicked")}> button</Button>
   
