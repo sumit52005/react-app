@@ -21,7 +21,7 @@ function ListGroup({items,heading,onSelectitem}:Props){
   
     <ul className="list-group">
         {items.map((item,index) => 
-        <li 
+        <li key={index}
             className={selectedIndex===index ? 'list-group-item active' : 'list-group-item'}
             onClick={()=>{setSelectedIndex(index);
             onSelectitem(item)
