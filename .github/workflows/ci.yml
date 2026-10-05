@@ -60,3 +60,9 @@ jobs:
           tags: |
             ghcr.io/sumit52005/react-app:latest
             ghcr.io/sumit52005/react-app:${{ github.sha }}
+      
+
+      # 8. Trigger Render deployment
+      - name: Trigger Render deployment
+        if: github.event_name == 'push'
+        run: curl -fsSL -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
